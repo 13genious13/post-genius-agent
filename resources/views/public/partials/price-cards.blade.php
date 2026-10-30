@@ -1,0 +1,3 @@
+<div class="pricing-grid">@foreach(config('postgenius_public.pricing') as $plan)
+<article class="price-card {{ $plan['featured'] ? 'featured' : '' }}">@if($plan['featured'])<span class="pill">Popular choice</span>@endif<h3>{{ $plan['name'] }}</h3><p class="muted">{{ $plan['description'] }}</p><div class="price">{{ $plan['price'] }}<small>{{ $plan['period'] }}</small></div><a class="btn {{ $plan['featured'] ? 'btn-primary' : 'btn-outline' }} full" href="{{ route('public.contact') }}?plan={{ urlencode($plan['name']) }}">Talk to us →</a><ul class="check-list">@foreach($plan['features'] as $feature)<li>{{ $feature }}</li>@endforeach</ul></article>
+@endforeach</div>

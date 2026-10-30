@@ -1,0 +1,6 @@
+@extends('public.layout')
+@section('content')
+<section class="page-hero"><div class="container narrow center"><span class="eyebrow">Our purpose</span><h1>Make great marketing <span class="gradient-text">more achievable.</span></h1><p class="lead">PostGenius Agent brings planning, creation, approvals and performance learning into one connected experience.</p></div></section>
+<section class="section"><div class="container split"><div><span class="eyebrow">Why we built it</span><h2>Less tool-switching. More meaningful work.</h2><p class="lead-sm">Small teams often manage research, creative production, scheduling and reporting across separate systems. PostGenius Agent is designed to reduce those handoffs while keeping people responsible for important decisions.</p></div><div class="steps-card"><div class="step-row"><span class="feature-icon">✦</span><div><h3>Clarity</h3><p>Know what the next campaign step is and why.</p></div></div><div class="step-row"><span class="feature-icon">🛡️</span><div><h3>Control</h3><p>Review sensitive actions and keep approvals explicit.</p></div></div><div class="step-row"><span class="feature-icon">📈</span><div><h3>Learning</h3><p>Use campaign evidence to make better decisions over time.</p></div></div></div></div></section>
+@include('public.partials.cta')
+@endsection

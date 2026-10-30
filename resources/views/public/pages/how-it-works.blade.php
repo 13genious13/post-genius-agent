@@ -1,0 +1,6 @@
+@extends('public.layout')
+@section('content')
+<section class="page-hero"><div class="container narrow center"><span class="eyebrow">Your campaign journey</span><h1>A clear path from <span class="gradient-text">idea to impact.</span></h1><p class="lead">A guided workflow that keeps your business goals and approvals at the center.</p></div></section>
+<section class="section"><div class="container timeline">@foreach([['01','Tell us about your business','Create a business profile, brand context and marketing objective.'],['02','Research and plan','Use research evidence and campaign strategy to shape the work.'],['03','Generate content and creatives','Prepare posts, captions and visuals for the channels you choose.'],['04','Review and approve','Check brand alignment and approve drafts before publishing.'],['05','Schedule and publish','Send approved content through connected, eligible social accounts.'],['06','Learn and optimize','Analyze available performance data and consider the next experiment.']] as $step)<div class="timeline-item"><div class="timeline-num">{{ $step[0] }}</div><div><h2>{{ $step[1] }}</h2><p>{{ $step[2] }}</p></div></div>@endforeach</div></section>
+@include('public.partials.cta')
+@endsection

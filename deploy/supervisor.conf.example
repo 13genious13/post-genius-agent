@@ -1,0 +1,12 @@
+[program:postgenius-workers]
+command=/usr/bin/php /var/www/postgenius/artisan queue:work database --queue=publishing,agent-loop,optimization,analytics,creative,agents,research,default --sleep=3 --tries=1 --timeout=240 --max-time=3600
+process_name=%(program_name)s_%(process_num)02d
+numprocs=2
+autostart=true
+autorestart=true
+stopasgroup=true
+killasgroup=true
+user=www-data
+redirect_stderr=true
+stdout_logfile=/var/log/supervisor/postgenius-workers.log
+stopwaitsecs=300
