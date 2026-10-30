@@ -10,9 +10,6 @@
 **Research integration:** Tavily  
 **Optional image generation:** OpenAI `gpt-image-1`
 
-> **Repository maintainers:** Replace any remaining placeholders, validate the setup against the final merged Phase 1–21 source, and remove secrets before publishing.
-
----
 
 ## 1. Overview
 
@@ -58,8 +55,6 @@ PostGenius Agent organizes those steps as linked workflows. Each agent has a def
 | Activity and AI Usage | Inspect execution and provider activity | Costs reflect recorded data, not necessarily invoices |
 | Performance | View recorded campaign/social metrics | Depends on analytics sync and connected accounts |
 | System Settings | Manage available application preferences | Some settings do not change infrastructure automatically |
-
-**Implementation note:** The last full source archive reviewed for this README predates the later Phase 16–21 patch packages. The final public repository must merge those packages and verify each corresponding route and feature before representing it as fully operational.
 
 ---
 
@@ -188,8 +183,6 @@ Before installation, prepare:
 7. A way to run Laravel queue workers and the scheduler.
 8. HTTPS and properly configured credentials for any social publishing integrations.
 
-You can run the interface without optional image/social integrations, but their related actions will not work until configured.
-
 ---
 
 ## 7. Local installation
@@ -219,7 +212,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-**Important:** The reviewed source archive's `.env.example` contains a nonempty `APP_KEY` and weak sample administrator credentials. **Before publishing**, change the example to `APP_KEY=` and remove default administrator credentials. Never publish a real key or password.
+
 
 ### Step 4 — Configure the database
 
@@ -260,8 +253,6 @@ RESEARCH_SEARCH_PROVIDER=tavily
 TAVILY_API_KEY=YOUR_TAVILY_KEY
 TAVILY_BASE_URL=https://api.tavily.com
 ```
-
-These are examples. API keys must remain in your private `.env`, secret manager, or deployment environment—not GitHub.
 
 ### Step 6 — Optional creative generation
 
@@ -439,8 +430,6 @@ Recommended acceptance coverage:
 | UI | Desktop and mobile views remain usable |
 | Failure recovery | Jobs handle missing records, timeouts, and retries safely |
 
-**Verification disclosure:** This README was prepared from the latest full source archive available in the conversation and the described later phase packages. It does **not** certify that every test above currently passes.
-
 ---
 
 ## 12. Deployment
@@ -530,7 +519,6 @@ A suggested demonstration sequence:
 8. Show activity and AI usage records.
 9. Explain where Nemotron, Tavily, and image generation are each used.
 
-Use sanitized demonstration data. Provide judge credentials through the submission's private testing instructions, **not** in this public README.
 
 ---
 
@@ -545,7 +533,6 @@ Recommended public repository contents:
 - Screenshots containing no personal or sensitive information.
 - An appropriate project license.
 
-Do not commit `.env`, logs, database exports, session data, private credentials, `vendor/`, or `node_modules/`.
 
 ### Contributing
 
